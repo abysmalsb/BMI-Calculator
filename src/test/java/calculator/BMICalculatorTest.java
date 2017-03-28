@@ -17,25 +17,8 @@ public class BMICalculatorTest {
 	@Test
 	public void testCalculateResults(){
 		
-		float[] expectedBMI = new float[14];
+		float[] expectedBMI = {27.8f, 23.4f, 58.8f, 34.6f, 40f, 44.4f, 25.7f, 25.1f, 26.3f, 31.1f, 21.6f, 18.4f, 17.5f};
 		int index = 0;
-		
-		expectedBMI[index++] = 27.8f;
-		expectedBMI[index++] = 23.4f;
-		expectedBMI[index++] = 58.8f;
-		expectedBMI[index++] = 34.6f;
-		expectedBMI[index++] = 40f;
-		expectedBMI[index++] = 44.4f;
-		expectedBMI[index++] = 25.7f;
-		
-		expectedBMI[index++] = 25.1f;
-		expectedBMI[index++] = 26.3f;
-		expectedBMI[index++] = 31.1f;
-		expectedBMI[index++] = 21.6f;
-		expectedBMI[index++] = 18.4f;
-		expectedBMI[index++] = 17.5f;
-		
-		index = 0;
 		float delta = 0.1f;
 		assertEquals(expectedBMI[index++], BMICalculator.calculate(95f, WeightUnit.KILOGRAMS, 185f, HeightUnit.CENTIMETER), delta);
 		assertEquals(expectedBMI[index++], BMICalculator.calculate(132.15f, WeightUnit.POUNDS, 160f, HeightUnit.CENTIMETER), delta);
